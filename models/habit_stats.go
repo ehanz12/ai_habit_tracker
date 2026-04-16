@@ -5,9 +5,8 @@ import "time"
 type HabitStat struct {
 	ID          uint `gorm:"primaryKey"`
 	HabitID     uint `gorm:"uniqueIndex"`
-	SuccessRate float64
 	Streak      int
-	LastUpdated time.Time
+	LastUpdated time.Time `gorm:"autoUpdateTime"`
 
 	Habit *Habit `gorm:"foreignKey:HabitID"`
 }

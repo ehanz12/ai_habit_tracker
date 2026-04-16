@@ -15,6 +15,16 @@ func ToHabitResponse(h models.Habit) response.HabitResponse {
 		PreferredTime:   h.PreferredTime,
 		TimeZone:        h.TimeZone,
 		ReminderEnabled: h.ReminderEnabled,
+		HabitStats: func() *response.HabitStatResponse {
+			if h.HabitStats != nil {
+				return &response.HabitStatResponse{
+					Streak:      h.HabitStats.Streak,
+				}
+			}
+			return &response.HabitStatResponse{
+				Streak:      0,
+			}
+		}(),
 	}
 }
 
