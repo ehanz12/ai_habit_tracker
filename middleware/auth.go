@@ -45,7 +45,7 @@ func ProtectedRoute(c *fiber.Ctx) error {
 		})
 	}
 
-	userID := int64(userIDFloat)
+	userID := uint(userIDFloat)
 
 	c.Locals("user_id", userID)
 

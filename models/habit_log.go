@@ -9,5 +9,5 @@ type HabitLog struct {
 	Completed bool      `gorm:"default:false"`
 	Note      string    `gorm:"type:text"`
 
-	Habit Habit
+	Habit Habit `gorm:"foreignKey:HabitID"`
 }
