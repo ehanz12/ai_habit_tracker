@@ -7,4 +7,5 @@ func SetupRoutes(app *fiber.App) {
 	SetupAuthRoutes(api)
 	SetupHabitRoutes(api)
 	SetupHabitLogRoutes(api)
+	SetupAIRoutes(api)
 }

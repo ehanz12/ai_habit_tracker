@@ -13,15 +13,7 @@ func main() {
 
 	//connect database
 	database.ConnectDB()
-	//migrate database
-// 	database.DB.AutoMigrate(
-//     &models.User{},
-//     &models.Habit{},
-//     &models.HabitLog{},
-//     &models.HabitStat{},
-//     &models.AIRecommendation{},
-//     &models.Notification{},
-// )
+	
 	//register fiber
 	app := fiber.New()
 	//register route
